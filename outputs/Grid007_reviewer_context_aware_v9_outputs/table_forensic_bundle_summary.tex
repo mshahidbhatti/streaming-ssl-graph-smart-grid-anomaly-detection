@@ -1,0 +1,17 @@
+\begin{tabular}{llrrrrrrrllll}
+\toprule
+Segment & t_range & Alert_% & RawAlert_% & StrongCyber_% & StrongPhysical_% & PhysicalConfirmed_% & MeanScore & MeanThreshold & DominantModality & SwitchContext & TopLocalizedNodes & Interpretation \\
+\midrule
+Nominal training & 0-215 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.448 & 1.682 & cyber & No & [19, 30, 11, 29, 38, 34] & Nominal/recovery operation \\
+Nominal validation & 216-280 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.343 & 1.682 & cyber & No & [19, 11, 30, 8, 38, 16] & Nominal/recovery operation \\
+Nominal/recovery gap 1 & 281-301 & 0.000 & 14.286 & 0.000 & 0.000 & 0.000 & 1.021 & 1.846 & physical & Yes & [19, 30, 11, 8, 24, 31] & Nominal/recovery operation \\
+Switch window 1 & 302-315 & 0.000 & 100.000 & 0.000 & 71.429 & 0.000 & 5.741 & 2.122 & event & Yes & [30, 19, 11, 31, 18] & Scheduled topology change/context \\
+Nominal/recovery gap 2 & 316-345 & 0.000 & 80.000 & 0.000 & 60.000 & 0.000 & 3.514 & 2.122 & physical & Yes & [30, 19, 29, 11, 31, 6] & Nominal/recovery operation \\
+Injected anomaly 1 & 346-363 & 100.000 & 100.000 & 100.000 & 11.111 & 0.000 & 18.117 & 2.122 & cyber & Yes & [24, 37, 32, 30, 33, 21] & Injected anomaly interval \\
+Nominal/recovery gap 3 & 364-371 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.106 & 2.068 & cyber & Yes & [19, 30, 11, 29, 34, 37] & Nominal/recovery operation \\
+Switch window 2 & 372-384 & 0.000 & 100.000 & 0.000 & 0.000 & 0.000 & 4.104 & 2.031 & event & Yes & [19, 30, 37, 31, 11] & Scheduled topology change/context \\
+Nominal/recovery gap 4 & 385-405 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.229 & 2.031 & cyber & Yes & [19, 11, 30, 29, 34, 37] & Nominal/recovery operation \\
+Injected anomaly 2 & 406-423 & 100.000 & 100.000 & 100.000 & 0.000 & 0.000 & 17.014 & 2.031 & cyber & Yes & [24, 32, 33, 37, 21, 30] & Injected anomaly interval \\
+Final recovery & 424-431 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.301 & 2.032 & cyber & No & [19, 30, 11, 8, 24, 28] & Nominal/recovery operation \\
+\bottomrule
+\end{tabular}

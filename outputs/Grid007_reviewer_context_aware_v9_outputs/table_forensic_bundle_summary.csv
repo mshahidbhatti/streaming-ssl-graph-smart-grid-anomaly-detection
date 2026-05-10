@@ -1,0 +1,12 @@
+Segment,t_range,Alert_%,RawAlert_%,StrongCyber_%,StrongPhysical_%,PhysicalConfirmed_%,MeanScore,MeanThreshold,DominantModality,SwitchContext,TopLocalizedNodes,Interpretation
+Nominal training,0-215,0.0,0.0,0.0,0.0,0.0,0.44785976739235694,1.6816989055870808,cyber,No,"[19, 30, 11, 29, 38, 34]",Nominal/recovery operation
+Nominal validation,216-280,0.0,0.0,0.0,0.0,0.0,0.3432081374264593,1.6816989055870815,cyber,No,"[19, 11, 30, 8, 38, 16]",Nominal/recovery operation
+Nominal/recovery gap 1,281-301,0.0,14.285714285714285,0.0,0.0,0.0,1.0213506185705326,1.8456388055150275,physical,Yes,"[19, 30, 11, 8, 24, 31]",Nominal/recovery operation
+Switch window 1,302-315,0.0,100.0,0.0,71.42857142857143,0.0,5.740713537179126,2.1216692056993156,event,Yes,"[30, 19, 11, 31, 18]",Scheduled topology change/context
+Nominal/recovery gap 2,316-345,0.0,80.0,0.0,60.0,0.0,3.513570319020417,2.1216692056993147,physical,Yes,"[30, 19, 29, 11, 31, 6]",Nominal/recovery operation
+Injected anomaly 1,346-363,100.0,100.0,100.0,11.11111111111111,0.0,18.11716271657295,2.1216692056993147,cyber,Yes,"[24, 37, 32, 30, 33, 21]",Injected anomaly interval
+Nominal/recovery gap 3,364-371,0.0,0.0,0.0,0.0,0.0,0.10637122599155667,2.068347888680856,cyber,Yes,"[19, 30, 11, 29, 34, 37]",Nominal/recovery operation
+Switch window 2,372-384,0.0,100.0,0.0,0.0,0.0,4.1041562919107415,2.0312374451768695,event,Yes,"[19, 30, 37, 31, 11]",Scheduled topology change/context
+Nominal/recovery gap 4,385-405,0.0,0.0,0.0,0.0,0.0,0.22922532564858736,2.031237445176869,cyber,Yes,"[19, 11, 30, 29, 34, 37]",Nominal/recovery operation
+Injected anomaly 2,406-423,100.0,100.0,100.0,0.0,0.0,17.013504392851868,2.0312374451768687,cyber,Yes,"[24, 32, 33, 37, 21, 30]",Injected anomaly interval
+Final recovery,424-431,0.0,0.0,0.0,0.0,0.0,0.3006419432382055,2.03164030994839,cyber,No,"[19, 30, 11, 8, 24, 28]",Nominal/recovery operation

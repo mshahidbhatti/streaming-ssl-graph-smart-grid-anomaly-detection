@@ -1,0 +1,160 @@
+{
+  "notebook_title": "Streaming Self-Supervised Graph Anomaly Detection for Smart Grids",
+  "output_location": {
+    "notebook_dir": "/content/drive/MyDrive/W26/smart Grid/smartGridV04/experiments",
+    "outdir": "/content/drive/MyDrive/W26/smart Grid/smartGridV04/experiments/Grid007_reviewer_context_aware_v9_outputs",
+    "zip_path": "/content/drive/MyDrive/W26/smart Grid/smartGridV04/experiments/Grid007_reviewer_context_aware_v9_outputs.zip"
+  },
+  "main_config": {
+    "case": "case39",
+    "T": 432,
+    "timestep_minutes": 5,
+    "window_W": 16,
+    "seed": 7,
+    "train_end_frac": 0.5,
+    "val_end_frac": 0.65
+  },
+  "model_config": {
+    "hidden": 64,
+    "mask_ratio": 0.25,
+    "lambda_temp": 0.2,
+    "lambda_var": 0.05,
+    "lambda_edge": 0.1,
+    "lambda_phys": 0.05,
+    "alpha": 1.0,
+    "beta": 0.0,
+    "score_mode": "robust_rec_cyber",
+    "rec_weight": 0.15,
+    "cyber_weight": 0.7,
+    "phys_weight": 0.15,
+    "edge_weight": 0.0,
+    "lat_weight": 0.0,
+    "threshold_method": "frozen_ewma_sigma",
+    "context_aware_alerting": true,
+    "cyber_confirm_z": 6.0,
+    "phys_confirm_z": 10.0,
+    "phys_min_rec_z": 1.5,
+    "phys_confirm_persistence_k": 3,
+    "phys_require_high_score": false,
+    "enable_physical_confirmation": true,
+    "persistence_k": 1,
+    "switch_grace_steps": 32,
+    "pre_switch_grace_steps": 2,
+    "post_switch_grace_steps": 32,
+    "phys_pre_switch_block_steps": 2,
+    "phys_post_switch_block_steps": 16,
+    "switch_suppress_alerts": true,
+    "switch_override_factor": 2.0
+  },
+  "stream_meta": {
+    "case": "case39",
+    "T": 432,
+    "timestep_minutes": 5,
+    "train_end": 216,
+    "val_end": 281,
+    "anomaly_windows": [
+      [
+        346,
+        363
+      ],
+      [
+        406,
+        423
+      ]
+    ],
+    "switch_windows": [
+      [
+        302,
+        315
+      ],
+      [
+        372,
+        384
+      ]
+    ],
+    "attack_bus_ids": [
+      37,
+      24,
+      33,
+      32,
+      21,
+      30
+    ],
+    "switched_line": 1,
+    "feature_names": [
+      "vm",
+      "va",
+      "p",
+      "q",
+      "freq",
+      "cyber_rate",
+      "cyber_flags",
+      "breaker_event"
+    ],
+    "edge_feature_names": [
+      "is_line",
+      "is_trafo",
+      "r",
+      "x",
+      "capacity"
+    ],
+    "attack_description": "Scenario=cyber_physical; severity=1.0; attack_during_switch=False. Window 1 is the stronger event and Window 2 is the subtler/persistent event.",
+    "cyber_feature_description": "Synthetic cyber_rate and cyber_flags are generated from load-dependent traffic plus noise and injected cyber deviations."
+  },
+  "stress_test_config": {
+    "run_reviewer_stress_tests": true,
+    "stress_test_seeds": [
+      7,
+      21,
+      42
+    ],
+    "attack_severities": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "stress_test_epochs": 4,
+    "run_attack_severity_sweep": true,
+    "run_physical_only_attack_test": true,
+    "run_attack_during_switch_test": true,
+    "run_case118_runtime": true
+  },
+  "generalization_config": {
+    "run_multi_case_generalization": true,
+    "generalization_cases": [
+      "case14",
+      "case30",
+      "case39",
+      "case57",
+      "case118"
+    ],
+    "generalization_seeds": [
+      7
+    ],
+    "generalization_epochs": 4,
+    "run_transfer_generalization": true,
+    "transfer_source_cases": [
+      "case39"
+    ],
+    "transfer_target_cases": [
+      "case14",
+      "case30",
+      "case57",
+      "case118"
+    ],
+    "transfer_seeds": [
+      7
+    ]
+  },
+  "reviewer_response_notes": [
+    "Temporal consistency collapse addressed through masked reconstruction, variance diagnostics, and ablation table.",
+    "Edge features participate in message passing and auxiliary edge reconstruction.",
+    "Physical consistency term is lightweight and not claimed as full AC power-flow enforcement.",
+    "Threshold updates can be frozen during alerts and scheduled switching to avoid threshold drift.",
+    "Context-aware cyber confirmation suppresses switch/event-only reconstruction spikes in the final alert decision.",
+    "A separate persistent physical-evidence branch is included for physical-only stress tests outside switching context.",
+    "Runtime table reports measured ms/step and throughput for the benchmark graph.",
+    "If cross-topology results are weak, remove foundation model from title and claims."
+  ]
+}

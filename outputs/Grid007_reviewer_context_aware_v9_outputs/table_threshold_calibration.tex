@@ -1,0 +1,10 @@
+\begin{tabular}{lrrrrrrrrrrrrrr}
+\toprule
+ThresholdMethod & TP & FP & FN & TN & Precision & Recall & F1 & F2 & FAR100 & FARswitch100 & AUROC & AUPRC & EventRecall & MeanDelay \\
+\midrule
+mad & 36 & 0 & 0 & 115 & 1.000 & 1.000 & 1.000 & 1.000 & 0.000 & 0.000 & 1.000 & 1.000 & 1.000 & 0.000 \\
+quantile & 36 & 0 & 0 & 115 & 1.000 & 1.000 & 1.000 & 1.000 & 0.000 & 0.000 & 1.000 & 1.000 & 1.000 & 0.000 \\
+ewma_sigma & 5 & 0 & 31 & 115 & 1.000 & 0.139 & 0.244 & 0.168 & 0.000 & 0.000 & 1.000 & 1.000 & 0.500 & 0.000 \\
+frozen_ewma_sigma & 36 & 0 & 0 & 115 & 1.000 & 1.000 & 1.000 & 1.000 & 0.000 & 0.000 & 1.000 & 1.000 & 1.000 & 0.000 \\
+\bottomrule
+\end{tabular}

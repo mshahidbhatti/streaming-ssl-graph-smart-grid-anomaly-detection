@@ -1,0 +1,5 @@
+TrainCase,TestCase,Protocol,Precision_mean,Precision_std,Recall_mean,Recall_std,F1_mean,F1_std,F2_mean,F2_std,FAR100_mean,FAR100_std,FARswitch100_mean,FARswitch100_std,EventRecall_mean,EventRecall_std,MeanDelay_mean,MeanDelay_std,AUROC_mean,AUROC_std,AUPRC_mean,AUPRC_std,Top3LocalizationHitRate_mean,Top3LocalizationHitRate_std
+case39,case118,source_to_target_calibrated,0.9999999999722223,,0.9999999999722223,,0.9999999994722224,,0.9999999997722224,,0.0,,0.0,,1.0,,0.0,,1.0,,1.0,,1.0,
+case39,case14,source_to_target_calibrated,0.9999999999722223,,0.9999999999722223,,0.9999999994722224,,0.9999999997722224,,0.0,,0.0,,1.0,,0.0,,1.0,,1.0,,1.0,
+case39,case30,source_to_target_calibrated,0.9999999999722223,,0.9999999999722223,,0.9999999994722224,,0.9999999997722224,,0.0,,0.0,,1.0,,0.0,,1.0,,1.0,,1.0,
+case39,case57,source_to_target_calibrated,0.9999999999722223,,0.9999999999722223,,0.9999999994722224,,0.9999999997722224,,0.0,,0.0,,1.0,,0.0,,1.0,,1.0,,1.0,
